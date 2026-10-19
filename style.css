@@ -67,6 +67,7 @@ h1 { color: var(--heading); font-size: 34px; font-weight: 600; line-height: 1.15
 .role { margin: 0 0 16px; }
 .contact { color: var(--muted); font: 14px/1.8 Inter, system-ui, sans-serif; margin-top: 20px; }
 .contact div { margin: 0; }
+.contact .email { font-size: 16px; }
 .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .btn {
   display: inline-block; padding: 8px 16px; border-radius: 6px;

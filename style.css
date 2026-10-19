@@ -87,6 +87,25 @@ h2 {
 }
 h3 { color: var(--heading); font-size: 17px; font-weight: 600; margin: 0 0 6px; }
 
+/* Data */
+.dataset {
+  border: 1px solid var(--rule); border-radius: 10px;
+  padding: 22px 24px; background: color-mix(in srgb, var(--tag-bg) 45%, var(--bg));
+}
+.dataset h3 { font-size: 20px; margin-bottom: 8px; }
+.dataset > p { margin: 0 0 16px; }
+.facts {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 20px;
+  margin: 0; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.facts dt {
+  font: 600 11px/1.4 Inter, system-ui, sans-serif; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--muted); margin-bottom: 2px;
+}
+.facts dd { margin: 0; font-size: 15.5px; }
+.dataset .cite { margin: 20px 0 0; font-size: 14.5px; color: var(--muted); }
+.cite span { font: 600 13px/1.4 Inter, system-ui, sans-serif; color: var(--text); margin-right: 4px; }
+
 /* Papers */
 .paper { margin: 0 0 24px; }
 .paper .title { font-weight: 600; }
@@ -122,4 +141,6 @@ footer {
   h1 { font-size: 28px; }
   .tabs a { padding: 10px 8px 12px; }
   main.wrap { padding-top: 28px; }
+  .facts { grid-template-columns: 1fr; }
+  .dataset { padding: 18px 16px; }
 }

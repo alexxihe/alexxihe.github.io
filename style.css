@@ -108,6 +108,13 @@ h3 { color: var(--heading); font-size: 17px; font-weight: 600; margin: 0 0 6px; 
 .dataset .cite { margin: 20px 0 0; font-size: 14.5px; color: var(--muted); }
 .cite span { font: 600 13px/1.4 Inter, system-ui, sans-serif; color: var(--text); }
 
+/* Discussions */
+.discussions { list-style: none; padding: 0; margin: 0; }
+.discussions li { margin: 0 0 18px; }
+.discussions .title { font-weight: 600; }
+.discussions .meta { color: var(--muted); font-size: 15.5px; }
+.discussions .venue { font-style: italic; color: var(--text); }
+
 /* Papers */
 .paper { margin: 0 0 24px; }
 .paper .title { font-weight: 600; }

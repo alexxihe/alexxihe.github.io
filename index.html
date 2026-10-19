@@ -19,6 +19,7 @@
       <a class="active" href="#home">Home</a>
       <a href="#research">Research</a>
       <a href="#data">Data</a>
+      <a href="#discussions">Discussions</a>
       <a href="cv.pdf">CV</a>
     </nav>
   </div>
@@ -190,6 +191,13 @@
     </article>
   </section>
 
+  <section id="discussions">
+    <h2>Conference Discussions</h2>
+    <ol class="discussions" id="discussion-list" aria-live="polite">
+      <li class="muted">Loading discussions…</li>
+    </ol>
+  </section>
+
 </main>
 
 <footer>
@@ -211,5 +219,42 @@
   update();
 </script>
 
+<script>
+  // List discussion slides from the repo's discussions/ folder.
+  // File names: "YYYY-MM Conference - Paper Title - Authors.pdf"
+  (async () => {
+    const list = document.getElementById('discussion-list');
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const esc = t => t.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    function parse(file) {
+      const base = file.name.replace(/\.pdf$/i, '');
+      const m = base.match(/^(\d{4})(?:-(\d{1,2}))?\s+(.*)$/);
+      if (!m) return null;
+      const [conference, title, authors] = m[3].split(' - ').map(x => x.trim());
+      const month = m[2] ? Number(m[2]) : 0;
+      return {
+        key: m[1] + String(month).padStart(2, '0'),
+        when: (month ? months[month - 1] + ' ' : '') + m[1],
+        conference, title: title || conference, authors,
+        href: file.path.split('/').map(encodeURIComponent).join('/'),
+      };
+    }
+    try {
+      const res = await fetch('https://api.github.com/repos/alexxihe/alexxihe.github.io/contents/discussions?ref=master');
+      if (!res.ok) throw new Error(res.status);
+      const items = (await res.json())
+        .filter(f => f.type === 'file' && /\.pdf$/i.test(f.name))
+        .map(parse).filter(Boolean)
+        .sort((a, b) => b.key.localeCompare(a.key));
+      list.innerHTML = items.length ? items.map(d => `
+        <li>
+          <a class="title" href="${esc(d.href)}">${esc(d.title)}</a>
+          <div class="meta">${d.authors ? 'by ' + esc(d.authors) + ' · ' : ''}<span class="venue">${esc(d.conference)}</span>, ${esc(d.when)}</div>
+        </li>`).join('') : '<li class="muted">Discussion slides will be posted here.</li>';
+    } catch (e) {
+      list.innerHTML = '<li class="muted">Discussion slides could not be loaded right now. Please try again later.</li>';
+    }
+  })();
+</script>
 </body>
 </html>

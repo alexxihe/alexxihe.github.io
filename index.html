@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Xi He</title>
+<meta name="description" content="Alex Xi He, Assistant Professor of Finance at the Robert H. Smith School of Business, University of Maryland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --rule: #e3e0d8;
+    --accent: #8a1c1c;
+    --tag-bg: #f1ede4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181b;
+      --text: #e6e3dc;
+      --muted: #9aa0a6;
+      --rule: #2c2f34;
+      --accent: #e08a7a;
+      --tag-bg: #24272b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 "Source Serif 4", Georgia, serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 1;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    font: 500 14px/1 Inter, system-ui, sans-serif;
+  }
+  nav .wrap { display: flex; flex-wrap: wrap; gap: 4px 20px; padding-top: 14px; padding-bottom: 14px; }
+  nav a { color: var(--muted); }
+  nav a:hover { color: var(--text); text-decoration: none; }
+
+  header { padding: 56px 0 32px; }
+  h1 { font-size: 40px; font-weight: 600; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .role { font-size: 19px; margin: 0; }
+  .contact {
+    margin-top: 18px; color: var(--muted);
+    font: 14px/1.7 Inter, system-ui, sans-serif;
+  }
+  .contact span + span::before { content: "·"; margin: 0 8px; }
+  .bio { margin-top: 24px; }
+
+  section { padding: 28px 0 8px; border-top: 1px solid var(--rule); }
+  h2 {
+    font: 600 13px/1 Inter, system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin: 0 0 20px;
+  }
+  .paper { margin: 0 0 22px; }
+  .paper .title { font-weight: 600; }
+  .paper .meta { color: var(--muted); font-size: 15.5px; }
+  .paper .venue { font-style: italic; color: var(--text); }
+  .tag {
+    display: inline-block; margin-left: 6px; padding: 1px 8px;
+    border-radius: 999px; background: var(--tag-bg); color: var(--muted);
+    font: 500 12px/1.6 Inter, system-ui, sans-serif; vertical-align: 2px;
+  }
+  .award { color: var(--accent); }
+  ul.plain { list-style: none; padding: 0; margin: 0 0 18px; }
+  ul.plain li { margin: 0 0 6px; }
+  h3 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+  footer {
+    border-top: 1px solid var(--rule); margin-top: 32px; padding: 20px 0 40px;
+    color: var(--muted); font: 13px/1.6 Inter, system-ui, sans-serif;
+  }
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    h1 { font-size: 32px; }
+    header { padding-top: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="cv.pdf">CV</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header>
+    <h1>Alex Xi He</h1>
+    <p class="role">Assistant Professor of Finance<br>Robert H. Smith School of Business, University of Maryland</p>
+    <div class="contact">
+      <span><a href="mailto:axhe@umd.edu">axhe@umd.edu</a></span>
+      <span>4411 Van Munching Hall, College Park, MD 20742</span>
+      <span><a href="cv.pdf">CV (PDF)</a></span>
+    </div>
+    <p class="bio">My research covers corporate finance, labor and finance, innovation and entrepreneurship, and organizational economics. I received my PhD in Economics from MIT in 2019 and my bachelor's degree in Economics and Mathematics from Tsinghua University.</p>
+  </header>
+
+  <section id="research">
+    <h2>Working Papers</h2>
+
+    <div class="paper">
+      <a class="title" href="inventor.pdf">Talent-Consolidating Mergers: Labor Market Power and Innovation</a>
+      <div class="meta">with Sophia Xue · <span class="venue">Revise and Resubmit, Journal of Financial Economics</span></div>
+      <div class="meta award">Drexel Governance Conference WRDS Best Paper Award, 2026</div>
+    </div>
+
+    <div class="paper">
+      <span class="title">Canaries in the Gold Mine: Early Productivity Gains from Artificial Intelligence Creating Organization Capital</span>
+      <div class="meta">with Tania Babina and Renhao Jiang · 2026</div>
+    </div>
+
+    <div class="paper">
+      <span class="title">Artificial Intelligence and Firms’ Systematic Risk</span>
+      <div class="meta">with Tania Babina, Anastassia Fedyk, and James Hodson · 2024</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+
+    <div class="paper">
+      <span class="title">Eclipse of Rent-Sharing: The Effects of Managers’ Business Education on Wages and the Labor Share in the US and Denmark</span>
+      <div class="meta">with Daron Acemoglu and Daniel le Maire · <span class="venue">American Economic Review</span>, accepted</div>
+    </div>
+
+    <div class="paper">
+      <span class="title">Managing Inequality: Manager-Specific Wage Premiums and Selection in the Managerial Labor Market</span>
+      <div class="meta">with Daniel le Maire · <span class="venue">Review of Economics and Statistics</span>, forthcoming</div>
+    </div>
+
+    <div class="paper">
+      <a class="title" href="aeapp.pdf">Artificial Intelligence Makes Firm Operating Performance Less Volatile</a>
+      <div class="meta">with Tania Babina, Anastassia Fedyk, and James Hodson · <span class="venue">AEA Papers and Proceedings</span>, 2025, 115: 35–39</div>
+    </div>
+
+    <div class="paper">
+      <a class="title" href="jfe.pdf">Artificial Intelligence, Firm Growth, and Product Innovation</a>
+      <div class="meta">with Tania Babina, Anastassia Fedyk, and James Hodson · <span class="venue">Journal of Financial Economics</span>, 2024, 151: 103745</div>
+    </div>
+
+    <div class="paper">
+      <a class="title" href="jf.pdf">Household Liquidity Constraints and Labor Market Outcomes: Evidence from a Danish Mortgage Reform</a>
+      <div class="meta">with Daniel le Maire · <span class="venue">Journal of Finance</span>, 2023, 78(6): 3251–3298</div>
+    </div>
+
+    <div class="paper">
+      <a class="title" href="qje.pdf">Cutting the Innovation Engine: How Federal Funding Shocks Affect University Patenting, Entrepreneurship, and Publications</a>
+      <div class="meta">with Tania Babina, Sabrina Howell, Elisabeth Perlman, and Joseph Staudt · <span class="venue">Quarterly Journal of Economics</span>, 2023, 138(2): 895–954</div>
+    </div>
+
+    <div class="paper">
+      <a class="title" href="nber.pdf">Firm Investments in Artificial Intelligence Technologies and Changes in Workforce Composition</a>
+      <div class="meta">with Tania Babina, Anastassia Fedyk, and James Hodson · <span class="venue">NBER Volume on Technology, Productivity, and Economic Growth</span>, 2022</div>
+    </div>
+
+    <div class="paper">
+      <a class="title" href="jet.pdf">A Theory of Intermediated Investment with Hyperbolic Discounting Investors</a>
+      <div class="meta">with Feng Gao and Ping He · <span class="venue">Journal of Economic Theory</span>, 2018, 177: 70–100</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Other Writing</h2>
+    <div class="paper">
+      <span class="title">Technology and Productivity Growth</span>
+      <div class="meta">with Lucia Foster · <span class="venue">Business Economics</span>, 2022, 57: 111–119</div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <h3>University of Maryland</h3>
+    <ul class="plain">
+      <li>Financial Programming (BUFN745) <span class="tag">Master’s</span></li>
+      <li>Quantitative Financial Analysis (BMGT347) <span class="tag">Undergraduate</span></li>
+      <li>Financial Research Methods (BMGT848B) <span class="tag">PhD</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© Alex Xi He · Last updated October 2026</div>
+</footer>
+
+</body>
+</html>

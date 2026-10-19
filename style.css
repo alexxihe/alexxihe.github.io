@@ -67,6 +67,15 @@ h1 { color: var(--heading); font-size: 34px; font-weight: 600; line-height: 1.15
 .role { margin: 0 0 16px; }
 .contact { color: var(--muted); font: 14px/1.8 Inter, system-ui, sans-serif; margin-top: 20px; }
 .contact div { margin: 0; }
+.buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn {
+  display: inline-block; padding: 8px 16px; border-radius: 6px;
+  border: 1px solid var(--accent); color: var(--accent);
+  font: 600 14px/1.2 Inter, system-ui, sans-serif;
+}
+.btn:hover { text-decoration: none; background: var(--tag-bg); }
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.primary:hover { background: var(--heading); border-color: var(--heading); }
 
 /* Sections */
 section { padding: 28px 0 8px; border-top: 1px solid var(--rule); margin-top: 28px; }

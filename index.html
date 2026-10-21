@@ -314,5 +314,14 @@
   update();
 </script>
 
+<script>
+  // Count PDF opens (papers, CV, discussion slides) as GoatCounter events.
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href$=".pdf"]');
+    if (a && window.goatcounter && window.goatcounter.count)
+      window.goatcounter.count({ path: decodeURIComponent(a.getAttribute('href')), title: a.textContent.trim(), event: true });
+  });
+</script>
+<script data-goatcounter="https://alexxihe.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
